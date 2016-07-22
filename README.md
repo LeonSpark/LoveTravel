@@ -1,32 +1,19 @@
-Progressus - Free business/corporate Bootstrap template
+LoveTravel -- A public welfare prototype based on blockchain
 =============
 
-Progressus is a free, responsive, nice-looking business template based on Bootstrap HTML/CSS framework. 
+LoveTravel is prototype system for public welfare based on blockchain, which involves multi-party tranfering
+asset on the boundary of trust.
 
+## Why blockchain?
+Money distribution in each charity event involves many organizations, i.e. donor, donation proposer (e.g. media, volunteer), charity organizations, retailers, express delivery, donee and so on. Each organization has her own database (ledger). If we can find a trustable third party to help managing a shared centralized DB among all the organizations, transparency of money distribution is not a problem. However, there isn’t. Because as what you have mentioned, it is very expensive- people need hiring, processes need to be designed, and all this takes a great deal of time and money. Also, some bribe-taking employees may change the central records if they can hack the admin account. As a cheaper solution, blockchain enables a database to be directly shared across boundaries of trust, without requiring a central administrator. Transactions can therefore be verified and processed independently by multiple “nodes” (organizations, volunteers or e.g. MS azure VMs can act as those nodes. All the transactions (money distribution) are recorded into the network which cannot be changed by any organization in private, and all the history can be traceable. 
 
-License
--------
-**Creative Commons Attribution 3.0** - http://creativecommons.org/licenses/by/3.0/
+## How to utilize blockchain technology?
+Money (donation) status can be treated as a DB. Money distribution is the money’s status change which is recorded through each transaction submitted by each organization in the charity event. Let’s take the following donation process as an example.
+A donor’s donation is submitted trough a transaction with <Transaction Id, her public KEY, RedCross (target) public KEY, Payload, EventID and her signature with private KEY>. The nodes in the network can valid and vote this transaction based on the information in the chain and rules. The transaction which got a majority votes becomes valid. The rules can be specified by the donor, I.e. if the RedCross does not process my donation in 30 days, the donation should be send back to my account… Here contains many details which will be introduced and discussed in a separate doc later , i.e. if the money is donated off the chain (by cash), the RedCross should send back a confirmation transaction.
+ 
+Similarly, each organization submit her transaction on money status change. Therefore, the whole money distribution can be traced through event ID.
+Another interesting and powerful feature by blockchain is ‘transaction dependency’. For example, some charity event ‘Donate your miles’- if 10,000 people can finish their marathon, a company X can donate 1M$ to poor children. In this case, company X’s transaction can be created with the dependency of 10,000 registered people’s transactions. Once people done their marathon. Company x’s money donation transaction can be submitted automatically. He cannot break his promise. This can be naturally supported in blockchain.
 
-
-Features
------------
-
-* Easy to use, fat-free HTML and CSS code.
-* 7 ready-made templates for most common tasks
-* Responsive design
-* High overral quality, the template does worth to be premium.
-
-
-Bug tracker
------------
-
-Found a bug? Please create an issue here on GitHub! 
-https://github.com/pozh/Progressus/issues
-
-
-Credits
--------
-* Design and development: **Sergey Pozhilov** - http://pozhilov.com
-* Photos used in template: **Unsplash** - http://unsplash.com
-* More free templates by Sergey: http://gettemplate.com
+## What blockchain system to utilize? 
+It is true that Ethereum on Azure is a straight forward solution. Actually, in the past month, we are working on private blockchain solutions and prototyping an optimized blockchain system for money/asset transfer which is called ‘ChainView’. It has much larger throughput than Ethereum and better scalability, better query efficiency through our chain view selection. We plan to develop this hackathon project to our ChainView deployed on Azure. Meanwhile, we are also investigating the possibility of ChainView + Ethereum  or Hyperledger.
+![workflow](https://github.com/LiYangsuda/images/blob/master/workflow.png?raw=true)
