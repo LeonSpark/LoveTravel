@@ -1,7 +1,7 @@
 /* Header */
 #head { background:#181015 url( ../images/blockchain-tech-follow-my-vote.jpg) no-repeat; background-size: cover; min-height:520px; text-align: center; padding-top:240px; color:white; font-family:"Open sans", Helvetica, Arial; font-weight:300; }
 #head.secondary { height:100px; min-height: 100px; padding-top:0px; }
-	#head .lead { font-family:"Open sans", Helvetica, Arial; font-size:44px; margin-bottom:6px; color:white; line-height:1.15em; } 
+	#head .lead { font-family:"Open sans", Helvetica, Arial; font-size:60px; font-weight: bold;margin-bottom:6px; color:white; line-height:1.15em; } 
 	#head .tagline { color:rgba(255,255,255,0.75); margin-bottom:25px; }
 		#head .tagline a { color:#fff; } 
 	#head .btn { margin-bottom:10px;}
@@ -13,7 +13,7 @@
 
 @media (max-width: 767px) {
 	#head { min-height:420px; padding-top:160px; }
-	#head .lead { font-size: 34px; }
+	#head .lead { font-size: 66px; font-weight: bold; color: #FFF; }
 }
 
 
@@ -81,6 +81,44 @@ img.pull-left { margin-right: 10px; }
 	.widget-simplenav { margin-left:-5px; }		
 	.widget-simplenav a{ margin:0 5px; }		
 
-/*.main-page{
- background:#181015 url( ../images/token-bg.jpg) no-repeat; background-size: cover; min-height:520px; text-align: center; padding-top:240px; color:white; font-family:"Open sans", Helvetica, Arial; font-weight:300; 
-}*/
+/*-------by ccyjava----------*/
+
+.relax {
+    color: inherit;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    margin-top:20px;
+}
+
+.lightgrey{
+    background-color:LightGrey;
+}
+
+#donate_bar{
+	
+    background-color: rgba(185, 174, 174, 0.36);
+    padding: 10px;
+    
+}
+#donate_item_header{
+	color: inherit;
+    background-color: rgba(123, 208, 239, 0.36);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    margin-top:20px;
+}		
+#eventTitle{
+	margin-top:10px;background-color:AliceBlue;
+}
+.blueborder{
+	border-left:1px solid AliceBlue;
+	border-right:1px solid AliceBlue;
+}
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}

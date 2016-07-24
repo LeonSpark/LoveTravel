@@ -6,7 +6,7 @@
 	<meta name="description" content="">
 	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
 	
-	<title>Left Sidebar template - Progressus Bootstrap template</title>
+	<title>History</title>
 
 	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
 	
@@ -17,7 +17,7 @@
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
 	<link rel="stylesheet" href="assets/css/main.css">
-	<link rel="stylesheet" href="assets/css/custom.css">
+
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 	<script src="assets/js/html5shiv.js"></script>
@@ -32,14 +32,21 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html">Project Title</a>
+				<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Progressus HTML5 template"></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-					<li><a href="about.html"><i class="fa fa-list-alt" aria-hidden="true"></i> My Donations</a></li>
-					<li><a href="about.html"><i class="fa fa-user" aria-hidden="true"></i> Flying Fish</a></li>
-					<li><a href="contact.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign out</a></li>
+					<li><a href="index.html">Home</a></li>
+					<li class="active"><a href="about.html">About</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="sidebar-left.html">Left Sidebar</a></li>
+							<li><a href="sidebar-right.html">Right Sidebar</a></li>
+						</ul>
+					</li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a class="btn" href="signin.html">SIGN IN / SIGN UP</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -50,97 +57,94 @@
 
 	<!-- container -->
 	<div class="container">
-		<header class="page-header">
-			<h4 class="">Account Management</h4>
-		</header>
-
-		<div class="row">
-			
-			<!-- Sidebar -->
-			<aside class="col-md-3 sidebar sidebar-left">
-				<ul class="nav nav-pills nav-stacked info-group">
-					<li role="presentation" class="current"><a href="#">Basic Info</a></li>
-					<li role="presentation"><a href="#">Key files</a></li>
-					<li role="presentation"><a href="#">Messages</a></li>
-				</ul>
-			</aside>
-			<!-- /Sidebar -->
-
-			<!-- Infomation main content -->
-			<div class="col-md-9 maincontent">
-				<table class="table table-hover">
-					<tbody>
-						<tr>
-							<strong  style="color: blue">Basic Infomation</strong>
-						</tr>
-						<tr>
-							<td><i class="fa fa-user" aria-hidden="true"></i> User Name</td>
-							<td>Flying fish</td>
-							<td class="text-right"><a>Change</a></td>
-						</tr>
-						<tr>
-							<td><i class="fa fa-lock" aria-hidden="true"></i> Password</td>
-							<td>****</td>
-							<td class="text-right"><a>Reset</a></td>
-						</tr>
-						<tr>
-							<td><i class="fa fa-envelope" aria-hidden="true"></i> Email</td>
-							<td>pet***@gmail.com</td>
-							<td class="text-right"><a>Change</a></td>
-						</tr>
-						<tr>
-							<td><i class="fa fa-phone" aria-hidden="true"></i> Mobile Phone</td>
-							<td>+86-188****7822</td>
-							<td class="text-right"><a>Change</a></td>
-						</tr>
-						<tr>
-							<td><i class="fa fa-user" aria-hidden="true"></i> Real Name</td>
-							<td>Yang Li</td>
-							<td class="text-right"></td>
-						</tr>
-				
-						<tr>
-							<td>
-								<strong style="color: blue">Key Files</strong>
-							</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><i class="fa fa-key" aria-hidden="true"></i> Public Key</td>
-							<td>OBovc-sIlsjljIQPJLslxaxoIS_IEsppsqsck93lahe2ldalj</td>
-							<td class="text-right"><a><i class="fa fa-folder-open-o" aria-hidden="true"></i>Open</a></td>
-						</tr>
-						<tr>
-							<td><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Private Key</td>
-							<td>********</td>
-							<td class="text-right"><a><i class="fa fa-eye" aria-hidden="true"></i>detail</a></td>
-						</tr>
-
-						<tr>
-							<td>
-								<strong  style="color: blue">Messages</strong>
-							</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Email me when status changed</td>
-							<td>
-								<label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>True
-								</label>
-							</td>
-							<td class="text-right">
-								<label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">False
-								</label>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<!-- /Infomation -->
+		<div class="row  relax" style="">
+			<div class="col-sm-2" style="border-left:1px solid black;border-right:1px solid black;">Love to Others</div>
+			<div class="col-sm-2" style="border-right:1px solid black;"><a href="">Love to Myself</a></div>
 
 		</div>
+		<div class="row">
+			<table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Time</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Detail</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>North Flood Call fro Donation</th>
+          <td>2016.02.30</td>
+          <td>$2000</td>
+          <td>Success</td>
+          <td><a href=""><span class="glyphicon glyphicon-link" aria-hidden="true"></span> </a></td>
+        </tr>
+        <tr>
+          <th >help for The Autism</th>
+          <td>2016.02.30</td>
+          <td>$2000</td>
+          <td>Success</td>
+          <td><a href=""><span class="glyphicon glyphicon-link" aria-hidden="true"></span> </a></td>
+        </tr>
+        <tr>
+          <th >Donate for XXX</th>
+          <td>2016.02.30</td>
+          <td>$2000</td>
+          <td>Success</td>
+          <td><a href=""><span class="glyphicon glyphicon-link" aria-hidden="true"></span> </a></td>
+        </tr>
+        <tr>
+          <th>North Flood Call fro Donation</th>
+          <td>2016.02.30</td>
+          <td>$2000</td>
+          <td>Success</td>
+          <td><a href=""><span class="glyphicon glyphicon-link" aria-hidden="true"></span> </a></td>
+        </tr>
+        <tr>
+          <th >help for The Autism</th>
+          <td>2016.02.30</td>
+          <td>$2000</td>
+          <td>Success</td>
+          <td><a href=""><span class="glyphicon glyphicon-link" aria-hidden="true"></span> </a></td>
+        </tr>
+        <tr>
+          <th >Donate for XXX</th>
+          <td>2016.02.30</td>
+          <td>$2000</td>
+          <td>Success</td>
+          <td><a href=""><span class="glyphicon glyphicon-link" aria-hidden="true"></span> </a></td>
+        </tr>
+        <tr>
+          <th>North Flood Call fro Donation</th>
+          <td>2016.02.30</td>
+          <td>$2000</td>
+          <td>Success</td>
+          <td><a href=""><span class="glyphicon glyphicon-link" aria-hidden="true"></span> </a></td>
+        </tr>
+        <tr>
+          <th >help for The Autism</th>
+          <td>2016.02.30</td>
+          <td>$2000</td>
+          <td>Success</td>
+          <td><a href=""><span class="glyphicon glyphicon-link" aria-hidden="true"></span> </a></td>
+        </tr>
+        <tr>
+          <th >Donate for XXX</th>
+          <td>2016.02.30</td>
+          <td>$2000</td>
+          <td>Success</td>
+          <td><a href=""><span class="glyphicon glyphicon-link" aria-hidden="true"></span> </a></td>
+        </tr>
+      </tbody>
+    </table>
+			
+			
+			
+		</div>
+
+		
 	</div>	<!-- /container -->
 	
 
@@ -164,7 +168,7 @@
 					<div class="col-md-3 widget">
 						<h3 class="widget-title">Follow me</h3>
 						<div class="widget-body">
-							<p class="follow-me-icons">
+							<p class="follow-me-icons clearfix">
 								<a href=""><i class="fa fa-twitter fa-2"></i></a>
 								<a href=""><i class="fa fa-dribbble fa-2"></i></a>
 								<a href=""><i class="fa fa-github fa-2"></i></a>
@@ -224,6 +228,5 @@
 	<script src="assets/js/headroom.min.js"></script>
 	<script src="assets/js/jQuery.headroom.min.js"></script>
 	<script src="assets/js/template.js"></script>
-	
 </body>
 </html>
