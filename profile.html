@@ -37,9 +37,9 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-					<li><a href="about.html"><i class="fa fa-list-alt" aria-hidden="true"></i> My Donations</a></li>
-					<li><a href="about.html"><i class="fa fa-user" aria-hidden="true"></i> Flying Fish</a></li>
-					<li><a href="contact.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign out</a></li>
+					<li><a href="history.html"><i class="fa fa-list-alt" aria-hidden="true"></i> My Donations</a></li>
+					<li class="active"><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Flying Fish</a></li>
+					<li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign out</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -59,9 +59,9 @@
 			<!-- Sidebar -->
 			<aside class="col-md-3 sidebar sidebar-left">
 				<ul class="nav nav-pills nav-stacked info-group">
-					<li role="presentation" class="current"><a href="#">Basic Info</a></li>
-					<li role="presentation"><a href="#">Key files</a></li>
-					<li role="presentation"><a href="#">Messages</a></li>
+					<li role="presentation" class="current"><a href="#">My Profile</a></li>
+					<li role="presentation"><a href="#">Personal Settings</a></li>
+					<li role="presentation"><a href="#">Security</a></li>
 				</ul>
 			</aside>
 			<!-- /Sidebar -->
@@ -109,7 +109,12 @@
 						<tr>
 							<td><i class="fa fa-key" aria-hidden="true"></i> Public Key</td>
 							<td>OBovc-sIlsjljIQPJLslxaxoIS_IEsppsqsck93lahe2ldalj</td>
-							<td class="text-right"><a><i class="fa fa-folder-open-o" aria-hidden="true"></i>Open</a></td>
+							<td class="text-right">
+								<div class="fileUpload btn btn-sm btn-success">
+									<i class="fa fa-folder-open-o" aria-hidden="true"> Open</i>
+									<input type="file" class="upload" />
+								</div>
+							</td>
 						</tr>
 						<tr>
 							<td><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Private Key</td>
@@ -130,7 +135,7 @@
 								<label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>True
 								</label>
 							</td>
-							<td class="text-right">
+							<td>
 								<label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">False
 								</label>
 							</td>

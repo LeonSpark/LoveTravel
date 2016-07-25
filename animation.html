@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://crl.ptopenlab.com:8800/bc/dashboard -->
+<html class="gray uk-notouch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>IBM Blockchain</title>
+	<link rel="icon" type="image/png" href="https://crl.ptopenlab.com:8800/bc/images/favicon.png">
+	<link rel="stylesheet" href="assets/css/uikit.almost-flat.min.css">
+	<link rel="stylesheet" href="assets/css/tooltip.almost-flat.min.css">
+	<link rel="stylesheet" href="assets/css/notify.almost-flat.min.css">
+	<link rel="stylesheet" href="assets/css/form-file.almost-flat.min.css">
+	<link rel="stylesheet" href="assets/css/ol.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script type="text/javascript" async="" defer="" src="assets/js/piwik.js"></script><script src="assets/js/require.js"></script>
+	<script type="text/javascript">
+		requirejs(["./js/common"], function(common) {
+			requirejs(["app/dashboard"]);
+		});
+		var _paq = _paq || [];
+		_paq.push(["setDomains", ["*.crl.ptopenlab.com/bc"]]);
+		_paq.push(['trackPageView']);
+		_paq.push(['enableLinkTracking']);
+		(function() {
+			var u="//crl.ptopenlab.com:8800/piwik/";
+			_paq.push(['setTrackerUrl', u+'piwik.php']);
+			_paq.push(['setSiteId', 15]);
+			var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+			g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+		})();
+	</script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/common" src="assets/js/common.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/dashboard" src="assets/js/dashboard.js"></script><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+<body>
+	<div class="uk-clearfix header">
+		<div class="uk-float-left">
+			<img src="assets/images/logo.svg" width="250">
+		</div>
+		
+		<div class="uk-float-right" style="position:relative;margin-top:20px;" data-uk-dropdown="{remaintime:100}">
+			<a data-uk-tooltip="{pos:&#39;left&#39;}" title="" class="uk-align-right uk-margin-remove subjectSel">
+				<i class="uk-icon-user"></i>
+				buptmr.guo@gmail.com
+				<i class="uk-icon-caret-down"></i>
+			</a>
+			<div class="uk-dropdown uk-dropdown-navbar uk-dropdown-small userPanel">
+				<ul class="uk-nav uk-nav-dropdown">
+					
+					<!-- <li>
+						<a id="reset">
+							<i class="uk-icon-recycle"></i>
+							Reset
+						</a>
+					</li> -->
+					
+					<li>
+						<a id="logout">
+							<i class="uk-icon-sign-out"></i>
+							Sign out
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="uk-float-right uk-margin-large-right" style="position:relative;margin-top:10px;color:#fff;">
+			<img src="assets/images/sv-logo.svg" alt="" width="40">
+			SuperVessel
+		</div>
+	</div>
+	<div class="uk-container uk-container-center uk-margin-top uk-margin-bottom uk-padding-remove">
+		<input type="hidden" id="apikey" name="apikey" value="242e0825-db42-43a7-8937-3c32b5c054e3">
+		<input type="hidden" id="privilege" name="privilege" value="deactivated">
+		<div class="uk-grid uk-grid-match" data-uk-grid-match="{target:&#39;.uk-panel&#39;}">
+			<div class="uk-width-1-3">
+				<div class="uk-panel">
+					<ul class="uk-tab uk-tab-grid" data-uk-tab="{connect:&#39;#chainCodePanel&#39;}">
+						<li class="uk-width-1-2" aria-expanded="false">
+							<a href="https://crl.ptopenlab.com:8800/bc/dashboard#">
+								<i class="uk-icon-briefcase"></i>
+								Smart Contracts
+							</a>
+						</li>
+						<li class="uk-width-1-2 uk-active" aria-expanded="true">
+							<a href="https://crl.ptopenlab.com:8800/bc/dashboard#">
+								<i class="uk-icon-list-ul"></i>
+								My Deployment
+							</a>
+						</li>
+					<li class="uk-tab-responsive uk-active uk-hidden" aria-haspopup="true" aria-expanded="false"><a>
+							
+								
+								My Deployment
+							
+						</a><div class="uk-dropdown uk-dropdown-small"><ul class="uk-nav uk-nav-dropdown"></ul><div></div></div></li></ul>
+					<ul id="chainCodePanel" class="uk-switcher" style="margin-top:1px;">
+						<li aria-hidden="true" class=""><div class="uk-panel uk-panel-box uk-panel-box-secondary switcher-panel uk-padding-remove" style="min-height: 400px;">
+							<div id="chaincodeListPanel">
+								<div style="padding:0px 5px 0px 15px;height:350px;">
+									<table class="uk-table uk-margin-remove" style="height:40px;">
+										<thead>
+											<tr style="color:#666">
+												<th width="3%"><label>#</label></th>
+												<th width="70%"><label>Contract Name</label></th>
+												<th width="27%" class="uk-text-center"><label>Action</label></th>
+											</tr>
+										</thead>
+									</table>
+									<div class="scrollable-box" style="height:310px;">
+										<table id="chaincodeList" class="uk-table uk-margin-remove" style="table-layout:fixed;">
+											
+											<tbody><tr data-cc-name="map" style="color:#666">
+												<td width="3%">
+													<label>
+													
+														<i class="uk-icon-unlock" data-uk-tooltip="{pos:&#39;right&#39;}" title="Public"></i>
+													
+													</label>
+												</td>
+												<td width="76%" class="uk-text-truncate">
+													<label>map</label>
+												</td>
+												<td width="21%" data-chaincode-name="map" data-chaincode-display-name="map" data-chaincode-description="This chaincode implements a simple map that is stored in the state. https://github.com/hyperledger/fabric/blob/master/examples/chaincode/go/map/map.go" data-chaincode-group="public" data-deploy-functions="[{&quot;name&quot;:&quot;init&quot;,&quot;args_sample&quot;:&quot;[]&quot;}]" data-invoke-functions="[{&quot;name&quot;:&quot;put&quot;,&quot;args_sample&quot;:&quot;[\&quot;car_owner\&quot;,\&quot;Cathy\&quot;]&quot;},{&quot;name&quot;:&quot;remove&quot;,&quot;args_sample&quot;:&quot;[\&quot;car_owner\&quot;]&quot;}]" data-query-functions="[{&quot;name&quot;:&quot;get&quot;,&quot;args_sample&quot;:&quot;[\&quot;car_owner\&quot;]&quot;},{&quot;name&quot;:&quot;keys&quot;,&quot;args_sample&quot;:&quot;[]&quot;}]">
+													<a class="uk-icon-hover uk-icon-file-text-o uk-margin-left viewBtn" data-uk-tooltip="{pos:&#39;right&#39;}" title="Deploy"></a>
+													
+												</td>
+											</tr>
+											
+											<tr data-cc-name="chaincode_example02" style="color:#666">
+												<td width="3%">
+													<label>
+													
+														<i class="uk-icon-unlock" data-uk-tooltip="{pos:&#39;right&#39;}" title="Public"></i>
+													
+													</label>
+												</td>
+												<td width="76%" class="uk-text-truncate">
+													<label>chaincode_example02</label>
+												</td>
+												<td width="21%" data-chaincode-name="chaincode_example02" data-chaincode-display-name="chaincode_example02" data-chaincode-description="A smart contract that supports point transfer between users. https://github.com/hyperledger/fabric/blob/master/examples/chaincode/go/chaincode_example02/chaincode_example02.go" data-chaincode-group="public" data-deploy-functions="[{&quot;name&quot;:&quot;init&quot;,&quot;args_sample&quot;:&quot;[\&quot;a\&quot;,\&quot;100\&quot;,\&quot;b\&quot;,\&quot;200\&quot;]&quot;}]" data-invoke-functions="[{&quot;name&quot;:&quot;invoke&quot;,&quot;args_sample&quot;:&quot;[\&quot;a\&quot;,\&quot;b\&quot;,\&quot;50\&quot;]&quot;},{&quot;name&quot;:&quot;delete&quot;,&quot;args_sample&quot;:&quot;[\&quot;a\&quot;]&quot;}]" data-query-functions="[{&quot;name&quot;:&quot;query&quot;,&quot;args_sample&quot;:&quot;[\&quot;a\&quot;]&quot;}]">
+													<a class="uk-icon-hover uk-icon-file-text-o uk-margin-left viewBtn" data-uk-tooltip="{pos:&#39;right&#39;}" title="Deploy"></a>
+													
+												</td>
+											</tr>
+											
+										</tbody></table>
+									</div>
+								</div>
+								<div class="upload-box uk-vertical-align uk-text-center" style="height:49px;">
+									<button id="createBtn" class="uk-button uk-button-primary uk-vertical-align-middle" type="button">
+										<i class="uk-icon-pencil"></i>
+										Import private smart contract
+									</button>
+								</div>
+							</div>
+							<div id="chaincodeViewPanel" class="uk-panel uk-panel-box uk-text-break" style="margin: 10px; display: none; min-height: 369px;">
+								<h3 class="uk-panel-title">
+									<label id="chaincodeDisplayName" style="color:#666"></label>
+								</h3>
+								<label id="chaincodeDescription" style="color:#666"></label>
+								<form class="uk-form uk-margin">
+									<input type="hidden" id="chaincodeName" name="chaincodeName" value="">
+									<input type="hidden" id="chaincodeGroup" name="chaincodeGroup" value="">
+									<input type="hidden" id="deployFunctions" name="deployFunctions" value="">
+									<input type="hidden" id="invokeFunctions" name="invokeFunctions" value="">
+									<input type="hidden" id="queryFunctions" name="queryFunctions" value="">
+									<div class="uk-form-row">
+										<input type="text" placeholder="" class="uk-width-1-1 instanceName" data-uk-tooltip="{pos:&#39;top-left&#39;}" title="Instance Name">
+									</div>
+									<div class="uk-form-row">
+										<input type="text" placeholder="" class="uk-width-1-1 instanceFunction" data-uk-tooltip="{pos:&#39;top-left&#39;}" title="Function">
+										<div class="uk-dropdown uk-dropdown-small uk-dropdown-bottom" style="display: none;">
+											<ul class="uk-nav uk-nav-dropdown uk-padding-remove"></ul>
+										</div>
+									</div>
+									<div class="uk-form-row">
+										<input type="text" placeholder="" class="uk-width-1-1 instanceArgs" data-uk-tooltip="{pos:&#39;top-left&#39;}" title="Arguments">
+									</div>
+									<div class="uk-form-row">
+										<button class="uk-button deployChaincode_backBtn" type="button">
+											<i class="uk-icon-arrow-left"></i>
+											Back
+										</button>
+										<button class="uk-button uk-button-primary
+												uk-align-right uk-margin-remove deployBtn" type="button">
+											<i class="uk-icon-file-archive-o"></i>
+											Deploy
+										</button>
+									</div>
+								</form>
+							</div>
+							<div id="chaincodeEditPanel" class="uk-panel uk-panel-box" style="margin: 10px; display: none; min-height: 369px;">
+								<h3 class="uk-panel-title">
+									<label style="color:#666">
+										<i class="uk-icon-edit"></i>
+										Edit smart contract
+									</label>
+								</h3>
+								<form class="uk-form uk-margin">
+									<input type="hidden" id="ccName" name="ccName" value="">
+									<input type="hidden" id="ccGroup" name="ccGroup" value="">
+									<div class="uk-form-row">
+										<input type="text" placeholder="" class="uk-width-1-1 ccDisplayName" data-uk-tooltip="{pos:&#39;top-left&#39;}" title="Contract Name">
+									</div>
+									<div class="uk-form-row">
+										<textarea rows="5" placeholder="" class="uk-width-1-1 ccDescription" data-uk-tooltip="{pos:&#39;top-left&#39;}" title="Description"></textarea>
+									</div>
+									<div class="uk-form-row">
+										<button class="uk-button editChaincode_backBtn" type="button">
+											<i class="uk-icon-arrow-left"></i>
+											Back
+										</button>
+										<button class="uk-button uk-button-primary
+												uk-align-right uk-margin-remove editChaincodeBtn" type="button">
+											<i class="uk-icon-save"></i>
+											Submit
+										</button>
+									</div>
+								</form>
+							</div>
+							<div id="privateChaincodePanel" class="uk-panel uk-panel-box" style="margin: 10px; display: none; min-height: 369px;">
+								<h3 class="uk-panel-title">
+									<label style="color:#666">
+										<i class="uk-icon-pencil"></i>
+										Import smart contract
+									</label>
+								</h3>
+								<form class="uk-form uk-margin">
+									<input type="hidden" id="chaincodeURL" name="chaincodeURL" value="">
+									<div class="uk-form-row">
+										<input type="text" placeholder="" class="uk-width-1-1 contractName" data-uk-tooltip="{pos:&#39;top-left&#39;}" title="Contract Name">
+									</div>
+									<div class="uk-form-row">
+										<textarea rows="5" placeholder="" class="uk-width-1-1 contractDescription" data-uk-tooltip="{pos:&#39;top-left&#39;}" title="Description"></textarea>
+									</div>
+									<div class="uk-form-row">
+										<div class="uk-form-file chaincode-placeholder">
+											<i class="uk-icon-cloud-upload uk-icon-small uk-text-muted" style="margin:5px 0px 5px 5px;"></i>
+											<label class="contractFile">Upload smart contract file</label>
+											<input id="upload-chaincode" type="file">
+											<div class="upload-overlayer" style="display: none;"></div>
+										</div>
+									</div>
+									<div class="uk-form-row">
+										<button class="uk-button privateChaincode_backBtn" type="button">
+											<i class="uk-icon-close"></i>
+											Cancel
+										</button>
+										<button class="uk-button uk-button-primary
+												uk-align-right uk-margin-remove saveBtn" type="button">
+											<i class="uk-icon-save"></i>
+											Import
+										</button>
+									</div>
+								</form>
+							</div>
+						</div></li>
+						<li aria-hidden="false" class="uk-active"><div class="uk-panel uk-panel-box uk-panel-box-secondary switcher-panel uk-padding-remove">
+							<div id="deployedChaincodePanel" style="padding: 0px 5px 0px 15px; height: 400px; display: none;">
+								<table class="uk-table uk-margin-remove" style="height:40px;">
+									<thead>
+										<tr style="color:#666">
+											<th width="80%"><label>Instance Name</label></th>
+											<th width="20%"><label>Action</label></th>
+										</tr>
+									</thead>
+								</table>
+								<div class="scrollable-box" style="height:360px;">
+									<table id="deployedChaincode" class="uk-table uk-margin-remove" style="table-layout:fixed;">
+										
+										<tbody><tr style="color:#666">
+											<td width="85%" class="uk-text-truncate">
+												<label>chaincode_example02 / Instance_8b6c32</label>
+											</td>
+											<td width="15%" data-instance-id="a5389f7dfb9efae379900a41db1503fea2199fe400272b61ac5fe7bd0c6b97cf10ce3aa8dd00cd7626ce02f18accc7e5f2059dae6eb0786838042958352b89fb" data-invoke-functions="[{&quot;name&quot;:&quot;invoke&quot;,&quot;args_sample&quot;:&quot;[\&quot;a\&quot;,\&quot;b\&quot;,\&quot;50\&quot;]&quot;},{&quot;name&quot;:&quot;delete&quot;,&quot;args_sample&quot;:&quot;[\&quot;a\&quot;]&quot;}]" data-query-functions="[{&quot;name&quot;:&quot;query&quot;,&quot;args_sample&quot;:&quot;[\&quot;a\&quot;]&quot;}]">
+												<a class="uk-icon-hover uk-icon-arrow-circle-o-right invokeBtn" data-uk-tooltip="{pos:&#39;right&#39;}"></a>
+												<a class="uk-icon-hover uk-icon-search uk-margin-small-left queryBtn" data-uk-tooltip="{pos:&#39;right&#39;}" title="Query"></a>
+											</td>
+										</tr>
+										
+									</tbody></table>
+								</div>
+							</div>
+							<div id="chaincodeOperatePanel" class="uk-panel uk-panel-box" style="margin: 10px; width: 323px;">
+								<h3 class="uk-panel-title">
+									<label style="color:#666"><i class="uk-icon-arrow-circle-o-right"></i>
+Invoke</label>
+								</h3>
+								<form class="uk-form uk-margin">
+									<input type="hidden" id="ccInstanceId" name="ccInstanceId" value="a5389f7dfb9efae379900a41db1503fea2199fe400272b61ac5fe7bd0c6b97cf10ce3aa8dd00cd7626ce02f18accc7e5f2059dae6eb0786838042958352b89fb">
+									<input type="hidden" id="operateFunctions" name="operateFunctions" value="[{&quot;name&quot;:&quot;invoke&quot;,&quot;args_sample&quot;:&quot;[\&quot;a\&quot;,\&quot;b\&quot;,\&quot;50\&quot;]&quot;},{&quot;name&quot;:&quot;delete&quot;,&quot;args_sample&quot;:&quot;[\&quot;a\&quot;]&quot;}]">
+									<div class="uk-form-row">
+										<input type="text" placeholder="invoke" class="uk-width-1-1 operateFunction" data-uk-tooltip="{pos:&#39;top-left&#39;}">
+										<div class="uk-dropdown uk-dropdown-small uk-dropdown-bottom" style="display: none;">
+											<ul class="uk-nav uk-nav-dropdown uk-padding-remove"></ul>
+										</div>
+									</div>
+									<div class="uk-form-row">
+										<input type="text" placeholder="[&quot;a&quot;,&quot;b&quot;,&quot;50&quot;]" class="uk-width-1-1 operateArgs" data-uk-tooltip="{pos:&#39;top-left&#39;}">
+									</div>
+									<div class="uk-form-row">
+										<button class="uk-button operateChaincode_backBtn" type="button">
+											<i class="uk-icon-arrow-left"></i>
+											Back
+										</button>
+										<button class="uk-button uk-button-primary
+												uk-align-right uk-margin-remove operateBtn" type="button">
+											<i class="uk-icon-paper-plane-o"></i>
+											Submit
+										</button>
+									</div>
+								</form>
+							</div>
+						</div></li>
+					</ul>
+					<div id="chaincodePanelOverlay" class="panel-overlayer" style="display: none;">
+						<div class="iconrefresh">
+							<i class="uk-icon-refresh uk-icon-spin uk-icon-small"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="uk-width-2-3">
+				<div class="uk-panel uk-panel-box uk-panel-header uk-padding-bottom-remove">
+					<div id="topology-log" class="uk-panel-badge uk-badge uk-badge-notification uk-badge-success" data-uk-tooltip="{pos:&#39;left&#39;}" title="Monitor Log" style="cursor:pointer;" data-log="true">
+						<i class="uk-icon-binoculars"></i>
+					</div>
+					<h3 class="uk-panel-title uk-margin-remove">
+						<i class="uk-icon-share-alt"></i>
+						Network Topology
+					</h3>
+					<div id="map" class="map" style="">
+						<label class="latency-show">
+							<input id="showLatency" type="checkbox" checked="checked">
+							Show latency
+						</label>
+					<div class="ol-viewport" style="position: relative; overflow: hidden; width: 100%; height: 100%; touch-action: none;"><canvas class="ol-unselectable" width="756" height="370" style="width: 100%; height: 100%;"></canvas><div class="ol-overlaycontainer"></div><div class="ol-overlaycontainer-stopevent"></div></div></div>
+					<div id="logPanel" class="log-panel">
+						<ul class="uk-grid uk-grid-collapse log-badge"><li class="uk-width" style="width:30px;"><div class="uk-badge uk-badge-success" style="border-radius:0 0 0 2px;cursor:pointer;">vp0</div></li><li class="uk-width" style="width:30px;"><div class="uk-badge log-badge-normal" style="border-radius:0;cursor:pointer;">vp1</div></li><li class="uk-width" style="width:30px;"><div class="uk-badge log-badge-normal" style="border-radius:0;cursor:pointer;">vp2</div></li><li class="uk-width" style="width:30px;"><div class="uk-badge log-badge-normal" style="border-radius:0;cursor:pointer;">vp3</div></li></ul>
+						<label class="log-show">
+							<input id="showLatestLogs" type="checkbox" checked="checked">
+							Always show the latest logs
+						</label>
+					<div class="vp0" style="font-size:11px;height:355px;overflow-x:hidden;overflow-y:auto;"></div><div class="vp1" style="font-size:11px;height:355px;overflow-x:hidden;overflow-y:auto;display:none;"></div><div class="vp2" style="font-size:11px;height:355px;overflow-x:hidden;overflow-y:auto;display:none;"></div><div class="vp3" style="font-size:11px;height:355px;overflow-x:hidden;overflow-y:auto;display:none;"></div></div>
+					<div id="topologyPanelOverlay" class="panel-overlayer" style="display: none;">
+						<div class="iconrefresh">
+							<i class="uk-icon-refresh uk-icon-spin uk-icon-small"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="uk-panel uk-panel-box uk-panel-box-secondary uk-panel-header blockchain-panel">
+			<div class="uk-panel-badge">
+				<div class="uk-badge uk-badge-notification" data-uk-tooltip="{pos:&#39;left&#39;}" title="Block Number">
+					<label id="blockNumber">9</label>
+				</div>
+				<div id="expand-compress" class="uk-badge uk-badge-notification uk-badge-success" data-uk-tooltip="{pos:&#39;left&#39;}" title="Expand" style="cursor:pointer;" data-expand="true">
+					<i class="uk-icon-expand"></i>
+				</div>
+			</div>
+			<h3 class="uk-panel-title">
+				<i class="uk-icon-chain"></i>
+				Block Chain
+			</h3>
+			<div id="blockchain" class="blockchain-ulist"><div style="overflow: hidden; transform-style: preserve-3d; width: 1168px; height: 90px; perspective: 123.636px;"><div style="transform-style: preserve-3d; width: 1168px; height: 90px; transform: translate3d(0px, 0px, 123.636px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, -145, 1) translate3d(584px, 45px, 0px);"><div class="uk-panel uk-panel-box uk-padding-remove block" style="position: absolute; transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -399, 0, -200, 1);"><div class="uk-width-1-1" style="padding:10px;"><div class="uk-text-truncate"><label style="color:#666">RrndKwuojRMjOz/rdD7rJD/NUupiuBuCtQwnZG7Vdi/XXcTd2MDyAMsFAZ1ntZL2/IIcSUeatIZAKS6ss7fEvg==</label></div></div><div class="uk-width-1-1 uk-text-small blockDetail"><div class="uk-clearfix"><div class="uk-float-left"><label>2016-07-24 04:35:08</label></div><div class="uk-float-right"><label>[0]</label></div></div></div><div class="uk-width-1-1 uk-text-small blockDetail" style="display:none;"><div class="uk-clearfix"><div class="uk-float-left"><label>2016-07-24 04:35:08</label></div><div class="uk-float-right"><label>[0]</label></div></div></div></div><div class="uk-panel uk-panel-box uk-padding-remove block" style="position: absolute; transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -584, 0, -200, 1);"><div class="uk-width-1-1" style="padding:10px;"><div class="uk-text-truncate"><label style="color:#666">M3X5c1t1QpIoJsKEYFzk5f8wHCO/SPy/HXLerchKw0YY1GMBYm6CDSBKfe/bzMzWPQthOtLPSIMx9g7t4qV9Ew==</label></div></div><div class="uk-width-1-1 uk-text-small blockDetail"><div class="uk-clearfix"><div class="uk-float-left"><label>2016-07-24 12:59:21</label></div><div class="uk-float-right"><label>[1]</label></div></div></div><div class="uk-width-1-1 uk-text-small blockDetail" style="display:none;"><div class="uk-clearfix"><div class="uk-float-left"><label>12:59:17</label></div><div class="uk-float-right"><label>[Deploy]</label></div></div></div></div><div class="uk-panel uk-panel-box uk-padding-remove block" style="position: absolute; transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 526, 0, 0, 1);"><div class="uk-width-1-1" style="padding:10px;"><div class="uk-text-truncate"><label style="color:#666">WjqJFEjkkd6iyde0pnXJo8Zb7HeLznnemgkhDTZuXPyWWygmib8CosfnP3166A2EAxXqyMYMf8VxBLVFpR/FaA==</label></div></div><div class="uk-width-1-1 uk-text-small blockDetail"><div class="uk-clearfix"><div class="uk-float-left"><label>2016-07-24 12:59:53</label></div><div class="uk-float-right"><label>[2]</label></div></div></div><div class="uk-width-1-1 uk-text-small blockDetail" style="display:none;"><div class="uk-clearfix"><div class="uk-float-left"><label>12:59:53</label></div><div class="uk-float-right"><label>[Invoke]</label></div></div></div></div><div class="uk-panel uk-panel-box uk-padding-remove block" style="position: absolute; transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 341, 0, 0, 1);"><div class="uk-width-1-1" style="padding:10px;"><div class="uk-text-truncate"><label style="color:#666">kCPLVY12NyBqs74LDubM6Los/ULhUgGmUg73K1vlfIkGuvR1uH4CMx411oNEu9pls+YcY2T7iTGT9Vr/sFELHQ==</label></div></div><div class="uk-width-1-1 uk-text-small blockDetail"><div class="uk-clearfix"><div class="uk-float-left"><label>2016-07-24 12:59:58</label></div><div class="uk-float-right"><label>[3]</label></div></div></div><div class="uk-width-1-1 uk-text-small blockDetail" style="display:none;"><div class="uk-clearfix"><div class="uk-float-left"><label>12:59:58</label></div><div class="uk-float-right"><label>[Invoke]</label></div></div></div></div><div class="uk-panel uk-panel-box uk-padding-remove block" style="position: absolute; transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 156, 0, 0, 1);"><div class="uk-width-1-1" style="padding:10px;"><div class="uk-text-truncate"><label style="color:#666">5AbUX7ZjX4VqnEcW+s3VK0PEVZrQXbwGAUDKaBdc5sT6n9xJ1dJEBjhF9ZI3501i68iYKd2lnRp4S2kIJFtAlA==</label></div></div><div class="uk-width-1-1 uk-text-small blockDetail"><div class="uk-clearfix"><div class="uk-float-left"><label>2016-07-24 13:29:01</label></div><div class="uk-float-right"><label>[4]</label></div></div></div><div class="uk-width-1-1 uk-text-small blockDetail" style="display:none;"><div class="uk-clearfix"><div class="uk-float-left"><label>13:29:01</label></div><div class="uk-float-right"><label>[Invoke]</label></div></div></div></div><div class="uk-panel uk-panel-box uk-padding-remove block" style="position: absolute; transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -29, 0, 0, 1);"><div class="uk-width-1-1" style="padding:10px;"><div class="uk-text-truncate"><label style="color:#666">FNKQ40yvJNznH+soTuTli2kbj4Ucm/Ir5iM4XAqgxlHDCb7R9ekfrq/V9gUIOWSRX5cBlq2YbATK4NFMbkDGcQ==</label></div></div><div class="uk-width-1-1 uk-text-small blockDetail"><div class="uk-clearfix"><div class="uk-float-left"><label>2016-07-24 14:56:19</label></div><div class="uk-float-right"><label>[5]</label></div></div></div><div class="uk-width-1-1 uk-text-small blockDetail" style="display:none;"><div class="uk-clearfix"><div class="uk-float-left"><label>14:56:19</label></div><div class="uk-float-right"><label>[Invoke]</label></div></div></div></div><div class="uk-panel uk-panel-box uk-padding-remove block" style="position: absolute; transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -214, 0, 0, 1);"><div class="uk-width-1-1" style="padding:10px;"><div class="uk-text-truncate"><label style="color:#666">8o4bJX4P1RxSCVFa7yjWJHNoJEVODKVB6olUZH/TO+ROtbxXn43LrepaJPq6ekPQIRv9aWx++AkpIn3CU8lVEQ==</label></div></div><div class="uk-width-1-1 uk-text-small blockDetail"><div class="uk-clearfix"><div class="uk-float-left"><label>2016-07-24 14:56:30</label></div><div class="uk-float-right"><label>[6]</label></div></div></div><div class="uk-width-1-1 uk-text-small blockDetail" style="display:none;"><div class="uk-clearfix"><div class="uk-float-left"><label>14:56:30</label></div><div class="uk-float-right"><label>[Invoke]</label></div></div></div></div><div class="uk-panel uk-panel-box uk-padding-remove block" style="position: absolute; transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -399, 0, 0, 1);"><div class="uk-width-1-1" style="padding:10px;"><div class="uk-text-truncate"><label style="color:#666">MKew6m/zAm5qcfkv9qhgxGE1Df8Jlun/Y1WP8D7ZjvQcRUhS0yUEHP8sikCYcrBn4ZqEbBFuQyhnSkUquztUKQ==</label></div></div><div class="uk-width-1-1 uk-text-small blockDetail"><div class="uk-clearfix"><div class="uk-float-left"><label>2016-07-24 14:56:49</label></div><div class="uk-float-right"><label>[7]</label></div></div></div><div class="uk-width-1-1 uk-text-small blockDetail" style="display:none;"><div class="uk-clearfix"><div class="uk-float-left"><label>14:56:49</label></div><div class="uk-float-right"><label>[Invoke]</label></div></div></div></div><div class="uk-panel uk-panel-box uk-padding-remove block" style="position: absolute; transform: translate3d(-50%, -50%, 0px) matrix3d(1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, -584, 0, 0, 1);"><div class="uk-width-1-1" style="padding:10px;"><div class="uk-text-truncate"><label style="color:#666">4THXIJ8Tceg5JkHDwwzONzS3VoZGgaw3Uwy1W/yT9+oANexpykx1DqoOYOYJ/bfY7f7/BlPB8a59t3/yrtJ1GA==</label></div></div><div class="uk-width-1-1 uk-text-small blockDetail"><div class="uk-clearfix"><div class="uk-float-left"><label>2016-07-24 14:57:20</label></div><div class="uk-float-right"><label>[8]</label></div></div></div><div class="uk-width-1-1 uk-text-small blockDetail" style="display:none;"><div class="uk-clearfix"><div class="uk-float-left"><label>14:57:20</label></div><div class="uk-float-right"><label>[Invoke]</label></div></div></div></div></div></div></div>
+			<div id="blockChainPanelOverlay" class="panel-overlayer" style="display: none;">
+				<div class="iconrefresh">
+					<i class="uk-icon-refresh uk-icon-spin uk-icon-small"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="resetOverlay" class="panel-overlayer fullscreen-overlayer">
+		<div class="iconrefresh">
+			<i class="uk-icon-refresh uk-icon-spin uk-icon-large"></i>
+		</div>
+	</div>
+	<div id="deleteChaincodeConfirmDialog" class="uk-modal">
+		<div class="uk-modal-dialog modal_small">
+			<div class="warning uk-margin-small-top">
+				<label>Are you sure to delete the smart contract?</label>
+			</div>
+			<div class="uk-modal-footer uk-text-right" style="padding:10px;">
+				<button type="button" id="nodelBtn" class="uk-button">No</button>
+				<button type="button" id="yesdelBtn" class="uk-button uk-button-primary">Yes</button>
+			</div>
+		</div>
+	</div>
+	<div id="logoutConfirmDialog" class="uk-modal">
+		<div class="uk-modal-dialog modal_nomh">
+			<div class="warning uk-margin-small-top">
+				<label>Your resources will be released, are you sure to sign out?</label>
+			</div>
+			<div class="uk-modal-footer uk-text-right" style="padding:10px;">
+				<button type="button" id="nobtn" class="uk-button">
+					No
+				</button>
+				<button type="button" id="yesbtn" class="uk-button uk-button-primary">
+					Yes
+				</button>
+			</div>
+		</div>
+	</div>
+
+<div class="uk-tooltip uk-tooltip-top-left" style="top: 190px; visibility: visible; display: none; left: 387px;"><div class="uk-tooltip-inner">Arguments</div></div></body></html>
